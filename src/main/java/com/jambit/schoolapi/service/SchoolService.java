@@ -56,10 +56,10 @@ public class SchoolService {
     }
 
     public void addLecturer(Lecturer lecturer) {
-        Optional<Lecturer> studentOptional =
+        Optional<Lecturer> lecturerOptional =
                 lecturerRepository.findById(lecturer.getId());
         if (AdditionalMethods.isEmailValid(lecturer.getEmail())) {
-            if (studentOptional.isPresent()) {
+            if (lecturerOptional.isPresent()) {
                 throw new IllegalStateException("Email already taken");
             }
         }

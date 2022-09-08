@@ -8,4 +8,8 @@ public class AdditionalMethods {
         Pattern pattern = Pattern.compile(regex);
         return email.matches(pattern.pattern());
     }
+
+    public static boolean isNameValid(String name) {
+        return name != null && name.length() > 0;
+    }
 }

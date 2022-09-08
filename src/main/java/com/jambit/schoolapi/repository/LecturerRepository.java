@@ -11,4 +11,7 @@ import java.util.Optional;
 public interface LecturerRepository extends JpaRepository<Lecturer, Long> {
     @Query("SELECT s FROM Lecturer s WHERE s.email = ?1")
     Optional<Lecturer> findLecturerByEmail(String email);
+
+    @Query("SELECT s FROM Lecturer s WHERE s.name = ?1")
+    Optional<Lecturer> findLecturerByName(String name);
 }
