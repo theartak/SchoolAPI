@@ -1,1 +1,1 @@
-demo for a potential project
+demo for a freelance project
